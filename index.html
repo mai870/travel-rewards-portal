@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- إعدادات العرض الأساسية للهواتف (تمنع التكبير العشوائي) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Crypto Travel Loophole</title>
+    <style>
+        /* استخدام خطوط نظام آبل الأصلية ليعطي إحساساً مألوفاً لمستخدمي الآيفون */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f7;
+            color: #1d1d1f;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* الشريط الأحمر الإخباري في الأعلى */
+        .top-banner {
+            background-color: #e3000f;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        /* العناوين */
+        .main-headline {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .sub-headline {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+
+        /* حاويات الأسئلة */
+        .step-container {
+            display: none; /* مخفية افتراضياً */
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .step-container.active {
+            display: block; /* تظهر فقط الحاوية النشطة */
+        }
+
+        .step-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #007aff; /* أزرق آيفون */
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .congrats-text {
+            color: #34c759; /* أخضر نجاح */
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        /* تصميم الأزرار (كبيرة ومناسبة للمس) */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.1s, background-color 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: #007aff;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #f2f2f7;
+            color: #1d1d1f;
+            border: 1px solid #d1d1d6;
+        }
+
+        .btn-success {
+            background-color: #34c759;
+            color: white;
+            box-shadow: 0 4px 10px rgba(52, 199, 89, 0.3);
+        }
+
+        .btn-text {
+            background-color: transparent;
+            color: #8e8e93;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        BREAKING: The "Zero-Hop" Checkout Loophole for US Crypto Holders
+    </div>
+
+    <div class="container">
+        <h1 class="main-headline">Stop letting legacy banks bleed 7% of your travel budget.</h1>
+        <p class="sub-headline">Discover how Web3 professionals are bypassing fiat spreads to book luxury travel directly on-chain.</p>
+
+        <!-- الشاشة الأولى -->
+        <div id="step1" class="step-container active">
+            <div class="step-title">Question 1 of 3</div>
+            <p class="question-text">Have you ever hesitated to off-ramp your crypto for a vacation to avoid CPA-level tax math or sudden bank freezes?</p>
+            <button class="btn btn-primary" onclick="nextStep(2)">YES, IT'S A NIGHTMARE</button>
+            <button class="btn btn-secondary" onclick="nextStep(2)">NO, I DON'T MIND BANKS</button>
+        </div>
+
+        <!-- الشاشة الثانية -->
+        <div id="step2" class="step-container">
+            <div class="step-title">Question 2 of 3</div>
+            <p class="question-text">Did you know you can now book flights natively with Crypto, and earn travel rewards in appreciating assets like Bitcoin instead of useless airline miles?</p>
+            <button class="btn btn-primary" onclick="nextStep(3)">SHOW ME HOW!</button>
+            <button class="btn btn-secondary" onclick="nextStep(3)">I PREFER FIAT POINTS</button>
+        </div>
+
+        <!-- الشاشة الثالثة (النهائية) -->
+        <div id="step3" class="step-container">
+            <div class="step-title">Final Step</div>
+            <h2 class="congrats-text">Congratulations!</h2>
+            <p class="question-text">Your crypto status qualifies you for a FREE Selyra VIP account today.</p>
+            <button class="btn btn-success" onclick="goToOffer()">CLAIM MY FREE VIP ACCOUNT NOW</button>
+            <button class="btn btn-text" onclick="goToOffer()">No thanks, I'll pay bank fees</button>
+        </div>
+    </div>
+
+    <script>
+        // دالة للانتقال بين شاشات الأسئلة بسلاسة
+        function nextStep(stepNumber) {
+            // إخفاء كل الشاشات
+            var steps = document.getElementsByClassName('step-container');
+            for (var i = 0; i < steps.length; i++) {
+                steps[i].classList.remove('active');
+            }
+            // إظهار الشاشة المطلوبة
+            document.getElementById('step' + stepNumber).classList.add('active');
+        }
+
+        // دالة التوجيه إلى رابط العرض النهائي مع وسوم التتبع وفرض اللغة الإنجليزية
+        function goToOffer() {
+            window.location.href = 'https://selyra.top/?lang=en&utm_source=propellerads&utm_medium=popunder&utm_campaign=test_100'; 
+        }
+    </script>
+</body>
+</html>
